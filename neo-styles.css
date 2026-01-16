@@ -1579,8 +1579,11 @@ body[data-theme="dark"] .stat-number {
   }
 
   .journey-section {
-    margin-bottom: 2rem;
+  display: flex;
+  justify-content: center;
+  margin-bottom: 3rem;
   }
+
 
   .journey-timeline {
     padding: 1rem;
@@ -1847,13 +1850,11 @@ body[data-theme="dark"] .stat-number {
 }
 
 .journey-container {
-  display: grid;
-  grid-template-columns: 1fr;
-  gap: 1.5rem;
-  max-width: 100%;
-  margin: 0;
-  position: relative;
+  margin: 0 auto;
 }
+
+
+
 
 @media (min-width: 769px) {
   .journey-container {
@@ -1867,12 +1868,10 @@ body[data-theme="dark"] .stat-number {
   }
 
   .journey-timeline {
-    grid-column: 1;
-    grid-row: 1;
-    transform-origin: right center;
-    transition: transform 0.1s ease-out;
-    transform: rotateY(180deg);
+  max-width: 720px;
+  width: 100%;
   }
+
 
   .journey-timeline-back {
     display: flex !important;
@@ -3521,4 +3520,16 @@ body[data-theme="dark"] .nav-lazyfire {
 .timeline-list,
 .timeline-item-flat {
   transform: none !important;
+}
+
+.journey-map-container,
+.journey-timeline-back {
+  display: none !important;
+}
+
+@media (min-width: 769px) {
+  .journey-container {
+    display: flex;
+    justify-content: center;
+  }
 }
